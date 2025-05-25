@@ -26,7 +26,8 @@ const years = Array.from(
 ).sort((a, b) => b.localeCompare(a));
 ---
 
-<BaseLayout title={`「${categoryName}」カテゴリのお知らせ一覧`}>
+<BaseLayout>
+  <h1>{`「${categoryName}」カテゴリのお知らせ一覧`}</h1>
   <NewsList items={contents} />
   <NewsNavigation years={years} categories={categories} />
 </BaseLayout>

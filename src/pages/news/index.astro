@@ -12,9 +12,9 @@ const years = Array.from(
 ).sort((a, b) => b.localeCompare(a));
 ---
 
-<BaseLayout title="お知らせ一覧">
+<BaseLayout>
   <section>
-    <h2>お知らせ一覧</h2>
+    <h1>お知らせ一覧</h1>
     <NewsList items={contents} />
   </section>
   <NewsNavigation years={years} categories={categories} />

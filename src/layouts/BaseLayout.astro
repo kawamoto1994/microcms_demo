@@ -1,5 +1,5 @@
 ---
-const { title = "お知らせサイト" } = Astro.props;
+const { title = "microCMS demo環境" } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -9,9 +9,10 @@ const { title = "お知らせサイト" } = Astro.props;
     <link rel="stylesheet" href="/styles/common.css">
   </head>
   <body>
-    <header><h1>{title}</h1></header>
+    <header>ここにヘッダーが入ります</header>
     <main>
       <slot />
     </main>
+    <footer>ここにフッターが入ります</footer>
   </body>
 </html>

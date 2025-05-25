@@ -31,7 +31,6 @@ export const getNewsByCategory = async (categoryId: string) => {
   });
 };
 
-
 export const getNewsByYear = async (year: string) => {
   const allNews = await client.getList<News>({ endpoint: "news" });
   return {
