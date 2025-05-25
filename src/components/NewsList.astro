@@ -1,0 +1,13 @@
+---
+import { formatDate } from "../utils/formatDate.ts";
+const { items } = Astro.props;
+---
+<ul>
+  {items.map((item) => (
+    <li>
+      <a href={`/news/${item.id}/`}>
+        {item.title}（{item.publishedAt ? formatDate(item.publishedAt) : ""}）
+      </a>
+    </li>
+  ))}
+</ul>
