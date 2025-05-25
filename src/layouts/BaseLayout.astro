@@ -6,12 +6,17 @@ const { title = "microCMS demo環境" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/styles/common.css">
+    <style global>
+      @import "@/styles/common.css";
+    </style>
+    <slot name="head" />
   </head>
   <body>
     <header>ここにヘッダーが入ります</header>
     <main>
-      <slot />
+      <div class="container">
+        <slot />
+      </div>
     </main>
     <footer>ここにフッターが入ります</footer>
   </body>
