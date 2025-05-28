@@ -16,9 +16,7 @@ const years = Array.from(
   <style slot="head" global>
     @import "@/styles/news.css";
   </style>
-  <section>
-    <h1>お知らせ一覧</h1>
-    <NewsList items={contents} />
-  </section>
+  <h1>お知らせ一覧</h1>
+  <NewsList items={contents} />
   <NewsNavigation years={years} categories={categories} />
 </BaseLayout>
