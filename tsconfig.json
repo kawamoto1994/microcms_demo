@@ -6,5 +6,6 @@
     },
     "strict": true,
     "allowJs": true
-  }
+  },
+  "exclude": ["postcss.config.js"]
 }

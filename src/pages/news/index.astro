@@ -2,7 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NewsList from "../../components/NewsList.astro";
 import NewsNavigation from "../../components/NewsNavigation.astro";
-import { getNewsList, getCategories } from "../../repositories/microcmsRepository";
+import { getNewsList, getCategories } from "../../api/microcms";
 
 const { contents } = await getNewsList();
 const { contents: categories } = await getCategories();
@@ -13,11 +13,9 @@ const years = Array.from(
 ---
 
 <BaseLayout>
-  <Fragment slot="head">
-    <style global>
-      @import "@/styles/news.css";
-    </style>
-  </Fragment>
+  <style slot="head" global>
+    @import "@/styles/news.css";
+  </style>
   <section>
     <h1>お知らせ一覧</h1>
     <NewsList items={contents} />

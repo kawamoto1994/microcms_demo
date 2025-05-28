@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getNewsList, getNewsBySlug } from "../../repositories/microcmsRepository";
+import { getNewsList, getNewsBySlug } from "../../api/microcms";
 import { formatDate } from "../../utils/formatDate";
 
 export async function getStaticPaths() {
